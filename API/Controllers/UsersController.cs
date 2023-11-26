@@ -34,12 +34,6 @@ public class UsersController : ControllerBase
         return user;
     }
 
-    [HttpGet("email")]
-    public ActionResult GetEmail(string email)
-    {
-        return Ok(email);
-    }
-
     #endregion
 
     #region Async methods
