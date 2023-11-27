@@ -21,8 +21,13 @@ app.UseHttpsRedirection();
 
 app.UseAuthorization();
 
+// Allow CORS from all origins
+//app.UseCors(builder => builder.AllowAnyHeader().AllowAnyMethod().WithOrigins("*"));
+
+
 // Allow CORS from localhost:4200 only
 app.UseCors(builder => builder.AllowAnyHeader().AllowAnyMethod().WithOrigins("http://localhost:4200"));
+
 app.MapControllers();
 
 app.Run();
